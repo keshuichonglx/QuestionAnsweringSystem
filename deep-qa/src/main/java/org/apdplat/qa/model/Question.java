@@ -168,13 +168,15 @@ public class Question {
         if (candidateAnswerFilter != null) {
             candidateAnswerFilter.filter(this, candidateAnswers);
         }
-        //分值归一化
+        //分值归一化 +++++++
         if (candidateAnswers.size() > 0) {
+            /*
             double baseScore = candidateAnswers.get(0).getScore();
             for (CandidateAnswer candidateAnswer : candidateAnswers) {
                 double score = candidateAnswer.getScore() / baseScore;
                 candidateAnswer.setScore(score);
             }
+            */
         }
 
         return candidateAnswers;
